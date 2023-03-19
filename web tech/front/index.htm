@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            img {
+                filter: drop-shadow(0 0 0.75rem crimson);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <form>
+            <input type="text" name="name" />
+            <input type="submit" name="submit" />
+        </form>
+
+        <img src="./img.svg" alt="left" id="left" /> -->
+
+        <div id="timer">
+            <div id="timer1">
+                <script type="text/javascript">
+                    const data = [
+                        {
+                            id: 1,
+                            name: "left",
+                            value: 0,
+                            date: new Date("2021-09-01 00:00:00"),
+                        },
+                        {
+                            id: 2,
+                            name: "right",
+                            value: 0,
+                            date: new Date("2022-09-01 08:30:00"),
+                        },
+                    ];
+                    onload = (e) => {
+                        function timer(item) {
+                            var x = setInterval(function () {
+                                var now = new Date().getTime();
+                                // Find the distance between now an the count down date
+                                var distance = now - item?.date;
+                                // Time calculations for days, hours, minutes and seconds
+                                var days = Math.floor(
+                                    distance / (1000 * 60 * 60 * 24)
+                                );
+                                var hours = Math.floor(
+                                    (distance % (1000 * 60 * 60 * 24)) /
+                                        (1000 * 60 * 60)
+                                );
+                                var minutes = Math.floor(
+                                    (distance % (1000 * 60 * 60)) / (1000 * 60)
+                                );
+                                var seconds = Math.floor(
+                                    (distance % (1000 * 60)) / 1000
+                                );
+                                // console.log(days, hours, minutes, seconds);
+                                document.getElementById(
+                                    `timer${item.id}`
+                                ).innerHTML =
+                                    days +
+                                    "d " +
+                                    hours +
+                                    "h " +
+                                    minutes +
+                                    "m " +
+                                    seconds +
+                                    "s ";
+                            }, 1000);
+                        }
+                        data.forEach((item) => {
+                            // console.log(item.date);
+                            timer(item);
+                        });
+                    };
+                </script>
+            </div>
+            <div id="timer2">
+                <script type="text/javascript">
+                    const datad = [
+                        {
+                            id: 1,
+                            name: "left",
+                            value: 0,
+                            date: new Date("2021-09-01 00:00:00"),
+                        },
+                        {
+                            id: 2,
+                            name: "right",
+                            value: 0,
+                            date: new Date("2022-09-01 08:30:00"),
+                        },
+                    ];
+                    onload = (e) => {
+                        function timer(item) {
+                            var x = setInterval(function () {
+                                var now = new Date().getTime();
+                                // Find the distance between now an the count down date
+                                var distance = now - item?.date;
+                                // Time calculations for days, hours, minutes and seconds
+                                var days = Math.floor(
+                                    distance / (1000 * 60 * 60 * 24)
+                                );
+                                var hours = Math.floor(
+                                    (distance % (1000 * 60 * 60 * 24)) /
+                                        (1000 * 60 * 60)
+                                );
+                                var minutes = Math.floor(
+                                    (distance % (1000 * 60 * 60)) / (1000 * 60)
+                                );
+                                var seconds = Math.floor(
+                                    (distance % (1000 * 60)) / 1000
+                                );
+                                // console.log(days, hours, minutes, seconds);
+                                document.getElementById(
+                                    `timer${item.id}`
+                                ).innerHTML =
+                                    days +
+                                    "d " +
+                                    hours +
+                                    "h " +
+                                    minutes +
+                                    "m " +
+                                    seconds +
+                                    "s ";
+                            }, 1000);
+                        }
+                        datad.forEach((item) => {
+                            // console.log(item.date);
+                            timer(item);
+                        });
+                    };
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
