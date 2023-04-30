@@ -3,7 +3,6 @@ const dbName = "test-db";
 import mongoose from "mongoose";
 
 export const connection = () => {
-    mongoose.Promise = global.Promise;
     mongoose
         .connect(`${URL}/${dbName}`, {
             useNewUrlParser: true,
